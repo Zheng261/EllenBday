@@ -10,6 +10,7 @@ namespace WebApplication2.Controllers
     {
         public ActionResult Index()
         {
+            // index
             return View();
         }
 
