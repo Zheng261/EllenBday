@@ -148,18 +148,31 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\OnePageWonder.css" />
+    <Content Include="App_Start\Content\blue-background-gold-stars.jpg" />
+    <Content Include="App_Start\Content\bootstrap.css" />
+    <Content Include="App_Start\Content\bootstrap.min.css" />
+    <Content Include="App_Start\Content\EllenDaisies.jpg" />
+    <Content Include="App_Start\Content\Logo.png" />
+    <Content Include="App_Start\Content\OnePageWonder.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
+    <Content Include="App_Start\Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Start\Content\Precious.ttf" />
+    <Content Include="App_Start\Content\Oswald-Light.ttf" />
+    <Content Include="App_Start\Content\Oswald-Medium.ttf" />
+    <Content Include="App_Start\Content\Oswald-Regular.ttf" />
+    <Content Include="App_Start\Content\Roboto-Light.ttf" />
+    <Content Include="App_Start\Content\Roboto-Medium.ttf" />
+    <Content Include="App_Start\Content\Roboto-Regular.ttf" />
+    <Content Include="App_Start\Content\RobotoSlab-Regular.ttf" />
+    <None Include="Properties\PublishProfiles\EllenBday20170720094453 - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\EllenBday20170720102517 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

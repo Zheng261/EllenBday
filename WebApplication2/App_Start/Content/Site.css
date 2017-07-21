@@ -1,0 +1,57 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('blue-background-gold-stars.jpg');
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+@font-face {
+    font-family: 'Oswald-Light';
+    src: url('Oswald-Light.ttf') format('truetype'), url('Oswald-Medium.ttf') format('truetype'), url('Oswald-Regular.ttf') format('truetype'), url('Precious.ttf') format('truetype'), url('Roboto-Light.ttf') format('truetype'), url('Roboto-Regular.ttf') format('truetype'), url('Roboto-Medium.ttf') format('truetype'), url('RobotoSlab-Regular.ttf') format('truetype');
+}
+
+h1 {
+    color: white;
+    font-family: Roboto-Regular;
+}
+
+h2 {
+    color: #ffd800;
+    font-family: Oswald;
+    font-size: 35px;
+    text-shadow: 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+h3 {
+    font-family: Roboto-Thin;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: #00ffff;
+    font-family: Roboto-Regular;
+    font-size: 25px;
+}
+
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.blank {
+    background-color: rgba(255, 255, 255, 0.75);
+}
