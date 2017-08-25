@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using WebApplication2.Models;
@@ -77,15 +78,15 @@ namespace WebApplication2.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public ActionResult Edit([Bind(Include = "Id,Name,Date,Address,Notes")] Event_Ideas event_Ideas)
+        public JsonResult Edit([Bind(Include = "Id,Name,Date,Address,Notes")] Event_Ideas event_Ideas)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(event_Ideas).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return Json(new { isSuccessful = true });
             }
-            return View(event_Ideas);
+            return Json(new { isSuccessful = false });
         }
 
         // GET: Event_Ideas/Delete/5

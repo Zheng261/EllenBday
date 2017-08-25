@@ -3,48 +3,125 @@
 @{
     ViewBag.Title = "Details";
 }
-
+<style>
+    body {
+        font-family: Algerian;
+        color:floralwhite
+    }
+</style>
 <h2>Details</h2>
 
-<div class="blankrly">
-    <h3>Event_Ideas</h3>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Date)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Date)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
-
-    </dl>
+<div id="detailTable">
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><button class="btn glowing back">Back</button></div>
+        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"></div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" align="right">
+            <button id="edit" class="btn glowing">Edit</button>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+            <button class="btn glowing" onclick="location.href='@Url.Action("Delete", new { id = Model.Id })';return false;">Delete</button>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 heading3">Name</div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 heading4" id="programID1">@Model.Name</div>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 heading3">Date</div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 heading4">@Model.Date.ToString("d")</div>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 heading3">Address</div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 heading4" id="programID1">@Model.Address</div>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-3 col-md-3 col-sm-3 col-xs-3 heading3">Notes</div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 heading4">@Model.Notes</div>
+        </div>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+
+@Html.AntiForgeryToken()
+<div id="editTable">
+    <div class="row">
+        <div class="col-lg-2"><button class="btn glowing back">Back</button></div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2 heading3">Name</div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><input id="Name" type="text" value="@Model.Name" class="input-lg" required /></div>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2 heading3">Date</div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6"><input id="Date" type="date" value="@Model.Date.ToString("yyyy-MM-dd")" class="input-lg" required /></div>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2 heading3">Address</div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><input id="Address" type="text" value="@Model.Address" class="input-lg" required /></div>
+        </div>
+    </div>
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2 heading3">Notes</div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><input id="Notes" type="text" value="@Model.Notes" class="input-lg" /></div>
+        </div>
+    </div>
+
+    <div class="row" align="center">
+                <button id="save" class="btn glowing">Save</button>
+                <button id="cancel" class="btn glowing">Cancel</button>
+    </div>
+</div>
+<br />
+<br />
+<br />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+        window.onload = function () {
+            $('#editTable').toggle();
+        }
+        $('#edit').click(function () {
+            toggle();
+        });
+
+        $('#save').click(function () {
+            alert("helo")
+                $.post("/Event_Ideas/Edit", {
+                    Id: @Model.Id,
+                    Name: $("#Name").val(),
+                    Date: $("#Date").val(),
+                    Address: $("#Address").val(),
+                    Notes: $("#Notes").val()             
+                }).then(function (result) {
+                    if (result.isSuccessful) {
+                        window.location.href = "/Event_Ideas?edit=true";
+                    } else {
+                        toastr.error("Invalid Input");
+                    }
+                });
+          });
+        function toggle() {
+            $('#detailTable').toggle();
+            $('#editTable').toggle();
+        }
+        $('#cancel').click(function () {
+            toggle();
+        });
+        $('.back').click(function () {
+            window.location.href = "/Event_Ideas";
+        });
+    </script>
+}
