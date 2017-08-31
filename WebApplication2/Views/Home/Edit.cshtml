@@ -1,0 +1,52 @@
+﻿@model WebApplication2.Models.Entities.TimeEntry
+
+@{
+    ViewBag.Title = "Edit";
+}
+<style>
+    body {
+        color: floralwhite
+    }
+</style>
+
+<h2>Edit Schedule Entry</h2>
+
+<div id="editTable">
+    <div class="row col-lg-12">
+        <div align="left">
+            <div class="col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-3 col-lg-2 col-md-2 col-sm-2 col-xs-2 heading3">Information</div>
+            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7"><input id="Notes" type="text" value="@Model.Information" class="input-lg" /></div>
+        </div>
+    </div>
+
+    <div class="row" align="center">
+        <button id="save" class="btn glowing">Save</button>
+        <button id="cancel" class="btn glowing">Back</button>
+    </div>
+</div>
+<br />
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript">
+
+        $('#save').click(function () {
+                $.post("/Home/EditEntry", {
+                    Id: @Model.Id,
+                    Day: @Model.Day,
+                    Slot: @Model.Slot,
+                    Information: $("#Notes").val()
+                }).then(function (result) {
+                    if (result.isSuccessful) {
+                        window.location.href = "/Home?edit=true";
+                    } else {
+                        toastr.error("Invalid Input");
+                    }
+                });
+        });
+
+        $('#cancel').click(function () {
+            window.location.href = "/Home";
+        });
+    </script>
+}

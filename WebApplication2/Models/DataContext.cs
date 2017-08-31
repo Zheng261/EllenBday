@@ -20,5 +20,7 @@ namespace WebApplication2.Models
         }
 
         public System.Data.Entity.DbSet<WebApplication2.Models.Entities.Event_Ideas> Event_Ideas { get; set; }
+
+        public System.Data.Entity.DbSet<WebApplication2.Models.Entities.TimeEntry> TimeEntries { get; set; }
     }
 }

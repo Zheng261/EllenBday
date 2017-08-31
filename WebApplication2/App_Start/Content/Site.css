@@ -1,7 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('BACK.jpg');
+    background-image: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(background.jpg);
     font-family: Algerian
 }
 
@@ -107,3 +107,4 @@ textarea {
     border-style: solid;
     border-color: gold;
 }
+

@@ -59,3 +59,39 @@
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+
+
+
+<div id="sortTable">
+    <table class="table" id="fullTable">
+        <thead>
+            <tr>
+                <th id="Day" class="clickable">Day</th>
+                <th id="Time" class="clickable">Slot</th>
+                <th id="Information" class="clickable">Information</th>
+                <th id="Person" class="clickable">Person</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody">
+            @{
+            foreach (var item in Model)
+            {
+            <tr class="tr clickable">
+                <td>
+                    @Html.DisplayFor(modelItem => item.Day)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Slot)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Information)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Person)
+                </td>
+            </tr>
+            }
+            }
+        </tbody>
+    </table>
+</div>

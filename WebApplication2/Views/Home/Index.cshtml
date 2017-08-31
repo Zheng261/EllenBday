@@ -1,29 +1,8 @@
-﻿@{
+﻿@model IEnumerable<WebApplication2.Models.Entities.TimeEntry>
+@{
     ViewBag.Title = "Ellen's Home Page";
 }
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Ellen Ouyang</title>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
+<link href="~/App_Start/Content/OnePageWonder.css" rel="stylesheet"/>
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -65,13 +44,13 @@
             </div>
         </div>
     </header>
+
     <div align="center">
         <h2>Random Cat :3</h2>
-        <img class="featurette-image img-circle img-responsive bordered" img src="http://thecatapi.com/api/images/get?format=src&type=gif">
+        <img class="featurette-image img-circle img-responsive bordered" alt = "y no load" img src="http://thecatapi.com/api/images/get?format=src&type=gif">
     </div>
     <!-- Page Content -->
     <div class="container">
-
 
         <!-- First Featurette -->
         <br />
@@ -127,308 +106,50 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">Pre 9 AM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">9 AM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">11 AM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">1 PM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">3 PM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">5 PM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">7 PM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td class="hour" rowspan="4"><span class="text-info">Post 7 PM</span></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    @for (int slot = 1; slot <= 7; slot++)
+                    {                      
+                       <tr>
+                          <td class="hour">
+                              @switch (slot)
+                                     {
+                                         case 1: <span class="text-info"> Pre 9 AM</span>;
+                                        break;
+                                         case 2: <span class="text-info"> 9 AM</span>;
+                                        break;
+                                         case 3: <span class="text-info"> 11 AM</span>;                               
+                                        break;
+                                         case 4: <span class="text-info"> 1 PM</span>;
+                                        break;
+                                         case 5: <span class="text-info"> 3 PM</span>;
+                                        break;
+                                         case 6: <span class="text-info"> 5 PM</span>;
+                                        break;
+                                         case 7: <span class="text-info"> Post 5 PM</span>;
+                                        break;
+                                     }
+                                </td>            
+                                @for (int day = 1; day <= 7; day++)
+                                {
+                                    var toUse = @Model.Where(x => x.Day == day).Where(x => x.Slot == slot).First();
+                                   <td class="clickable" onclick="editEntry(@toUse.Id)">@toUse.Information</td>
+                                }
+                            </tr>
+                        }
+                  }
                 </tbody>
             </table>
             <p class="lead"></p>
         </div>
-
+        <button id="productive" class="btn glowing" onclick="productivemode()">PRODUCTIVE MODE</button>
+        <div id="goellen" style="display:none">
+            <div class="row">
+                <img src="~/App_Start/Content/cuteslothgif.gif" alt="Gif isnt loading :(">
+                <img src="~/App_Start/Content/cuteslothgif.gif" alt="Gif isnt loading :(">
+                <img src="~/App_Start/Content/cuteslothgif.gif" alt="Gif isnt loading :(">
+                <img src="~/App_Start/Content/cuteslothgif.gif" alt="Gif isnt loading :( (by now it should be fairly obvious)">
+            </div>
+            <h2>You can do it, I believe in you :DDDDDDDDD</h2>
+        </div>
         <!-- Second Featurette -->
         <div class="container">
             <div id="services">
@@ -450,7 +171,7 @@
                         <br/>
                         <div class="row">
                             <div class="col-sm-4">
-                                <button class="btn-primary glowing" style="font-size:large" onclick="window.open('http://www.poorlydrawnlines.com/?random')">Random <p>PoorlyDrawnLines</p></button>
+                                <button class="btn-primary glowing" style="font-size:large" onclick="window.open('http://www.poorlydrawnlines.com/?random')">Random <p>PDLines</p></button>
                             </div>
                             <div class="col-sm-4">
                                 <button class="btn-primary glowing" style="font-size:large" onclick="window.open('http://explosm.net/comics/random')">Random <p>C&H</p></button>
@@ -459,7 +180,7 @@
                                 <button class="btn-primary glowing" style="font-size:large" onclick="window.open('https://c.xkcd.com/random/comic/')">Random <p>XKCD</p></button>
                             </div>
                         </div>
-                        </br>
+                        
                         <div class="row">
                             <div align="center">
                                 <form method="get" action="https://www.wolframalpha.com/input/" target="_blank">
@@ -508,16 +229,16 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6" align="center" style="display:none">
+                    <div class="col-lg-6" align="center" style="display:none" id="temp">
                         HELLO
                     </div>
                     <div class="col-lg-6" align="center">
                             <h2 class="featurette-heading" align="center">
                                 Playlists
-                                </br>
+                                
                                 <span>Studying/Classical</span>
                                 <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?list=PLVNZaEbRVrB_nsHZdYD1sdPiNV0UB3x1Z" frameborder="0" allowfullscreen></iframe>
-                                </br>
+                               <br/>
                                 <span>All Purpose Music</span>
                                 <iframe width="400" height="250" src="https://www.youtube.com/embed/videoseries?list=PLVNZaEbRVrB_zf95f9H4SOL8t7zig658c" frameborder="0" allowfullscreen></iframe>
                             </h2>
@@ -539,33 +260,31 @@
         -->
     </div>
     <!-- /.container -->
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-
-</body>
-</html>
-        <!-- this script got from www.javascriptfreecode.com-->
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    <link href="~/Content/toastr.css" rel="stylesheet" />
-    <script src="~/Scripts/toastr.js"></script>
     <script type="text/javascript">
 
-   $('.glowing').click(function () {
-       setTimeout(function () {
-           reset();
-       }, 2000)
-    });
+       $('.glowing').click(function () {
+            setTimeout(function () {
+                reset();
+             }, 2000)
+       });
+
+      function productivemode() {
+          $('#unproductive').toggle();
+          $('#goellen').toggle();
+      }
 
     function reset() {
         var cname, elems = document.getElementsByTagName("input");
         for (var i = elems.length; i--;) {
                 elems[i].value = "";
         }
-    }
+       }
+
+      function editEntry(id) {
+          document.location.href = "/Home/Edit/" + id;
+      }
     </script>
 }

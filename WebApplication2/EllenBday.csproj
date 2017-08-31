@@ -156,17 +156,24 @@
     <Compile Include="Migrations\201707220338252_Event_Ideas.Designer.cs">
       <DependentUpon>201707220338252_Event_Ideas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201708292146041_TimeEntry.cs" />
+    <Compile Include="Migrations\201708292146041_TimeEntry.Designer.cs">
+      <DependentUpon>201708292146041_TimeEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DataContext.cs" />
+    <Compile Include="Models\Entities\TimeEntry.cs" />
     <Compile Include="Models\Entities\Event Ideas.cs" />
     <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Start\Content\BACK.jpg" />
+    <Content Include="App_Start\Content\background.jpg" />
     <Content Include="App_Start\Content\blue-background-gold-stars.jpg" />
+    <Content Include="App_Start\Content\bootstrap-lumen.css" />
     <Content Include="App_Start\Content\bootstrap.css" />
     <Content Include="App_Start\Content\bootstrap.min.css" />
+    <Content Include="App_Start\Content\cuteslothgif.gif" />
     <Content Include="App_Start\Content\EllenDaisies.jpg" />
     <Content Include="App_Start\Content\Logo.png" />
     <Content Include="App_Start\Content\OnePageWonder.css" />
@@ -221,11 +228,12 @@
     <Content Include="Views\Event_Ideas\Create.cshtml" />
     <Content Include="Views\Event_Ideas\Delete.cshtml" />
     <Content Include="Views\Event_Ideas\Details.cshtml" />
-    <Content Include="Views\Event_Ideas\Edit.cshtml" />
     <Content Include="Views\Event_Ideas\Index.cshtml" />
+    <Content Include="Views\Home\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\TimeEntries\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -245,6 +253,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201707220338252_Event_Ideas.resx">
       <DependentUpon>201707220338252_Event_Ideas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708292146041_TimeEntry.resx">
+      <DependentUpon>201708292146041_TimeEntry.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -21,11 +21,14 @@ namespace WebApplication2
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
+                      "~/Scripts/toastr.js",
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/App_Start/Content/bootstrap.css",
+                      "~/App_Start/Content/Site.css",
+                      "~/App_Start/Content/toastr.css"
+                     ));
         }
     }
 }

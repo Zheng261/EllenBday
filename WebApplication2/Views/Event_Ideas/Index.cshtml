@@ -8,32 +8,32 @@
         font-family: Algerian;
         color: #ffffff     
     }
-    td {
+    .clickable {
         background: gray
     }
-    tbody tr:first-child td {
-        border-top-width: 0;
+    .clickable:hover {
+        background-color: lightgray;
     }
 </style>
 
 <h2>Event Index</h2>
 <div class="row">
-    <div class="search-label col-lg-3 col-md-3 col-sm-3 col-xs-3 align-left noPadding">
+    <div class="search-label col-lg-3 col-md-3 col-sm-3 col-xs-3">
         Search Events:
         <input id="search" class="input-xlg" />
     </div>
     <div class="col-lg-3 col-lg-offset-6">
-        <button id="create" class="btn primaryButton" align="right">Create Entry</button>
+        <button id="create" class="btn glowing" align="right">Create Entry</button>
     </div>
 </div>
 
 <div id="sortTable">
-    <table class="table clickable" id="fullTable">
+    <table class="table" id="fullTable">
         <thead>
-            <tr class="clickable">
-                <th id="Name">Event Name</th>
-                <th id="Date">Date</th>
-                <th id="Address">Address</th>
+            <tr>
+                <th id="Name" class="clickable">Event Name</th>
+                <th id="Date" class="clickable">Date</th>
+                <th id="Address" class="clickable">Address</th>
             </tr>
         </thead>
         <tbody id="tableBody">
@@ -55,6 +55,7 @@
             }
         </tbody>
     </table>
+    <div id="testLoad"></div>
 </div>
 
 @section Scripts {
@@ -66,12 +67,13 @@
         function redirectToEventDetails(id) {
             document.location.href = "/Event_Ideas/Details/" + id;
         }
-         $('th').on('click', function () {
-                index = $('th').index(this);
-                toggleSort("fullTable", index);
-         });
+        $('th').on('click', function () {
+            index = $('th').index(this);
+            toggleSort("fullTable", index);
+        });
         $('#search').on("change textInput input", function () {
             search("fullTable", $('#search').val());
         });
+
     </script>
 }

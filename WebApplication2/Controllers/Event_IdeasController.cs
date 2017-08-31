@@ -106,12 +106,12 @@ namespace WebApplication2.Controllers
 
         // POST: Event_Ideas/Delete/5
         [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
+        public JsonResult DeleteConfirmed(int id)
         {
             Event_Ideas event_Ideas = db.Event_Ideas.Find(id);
             db.Event_Ideas.Remove(event_Ideas);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return Json(new { isSuccessful = true });
         }
 
         protected override void Dispose(bool disposing)
